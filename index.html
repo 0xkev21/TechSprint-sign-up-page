@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSprint -Sign up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-wrapper">
+        <div class="background"></div>
+        <div class="fore-ground"></div>
+        <div class="logo-container">
+            <img src="assets/logo.svg" alt="logo">
+            <img src="assets/logo-title.svg" alt="logo title">
+        </div>
+    </div>
+    <div class="form-section-wrapper">   
+        <div class="heading">
+            <h1>Welcome to TechSprint Innovations</h1>
+            <p>Empowering Innovation for a Connected Tomorrow</p>
+        </div>
+        <div class="form-container">
+            <h2>Get Involved Now !</h2>
+            <form method="POST" action="">
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <div class="group-first-name">
+                        <label for="firstName">First Name <span aria-label="required">*</span></label>
+                        <input type="text" name="firstName" id="firstName" value="" placeholder="John" required>
+                        <span class="status" aria-hidden></span>
+                    </div>
+                    <div class="group-last-name">
+                        <label for="lastName">Last Name <span aria-label="required">*</span></label>
+                        <input type="text" name="lastName" id="lastName" value="" placeholder="Wick" required>
+                        <span class="status" aria-hidden></span>
+                    </div>
+                    <div class="group-mail">
+                        <label for="mail">Email <span aria-label="required">*</span></label>
+                        <input type="email" name="mail" id="mail" value="" placeholder="johnwick@gmail.com" required>
+                        <span class="status" aria-hidden></span>
+                    </div>
+                    <div class="group-phone-number">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="tel" name="phoneNumber" id="phoneNumber" value="" placeholder="09912345678">
+                        <span class="status" aria-hidden></span>
+                    </div>
+                    <div class="group-password">
+                        <label for="password">Password <span aria-label="required">*</span></label>
+                        <input type="password" name="password" id="password" value="" placeholder="********" required>
+                        <span class="status" aria-hidden></span>
+                    </div>
+                    <div class="group-password-confirm">
+                        <label for="passwordConfirm">Confirm Password <span aria-label="required">*</span></label>
+                        <input type="password" name="passwordConfirm" id="passwordConfirm" value="" placeholder="********" required>
+                        <span class="status" aria-hidden></span>
+                    </div>
+                    <div class="group-input-buttons">
+                        <label for="terms">
+                            <input type="checkbox" name="terms" id="terms" checked>
+                            <span>Agree <a href="#">Terms</a> and <a href="#">Conditions</a></span>
+                        </label>
+                        <input type="submit" value="Create Account">
+                    </div>
+                    <p>Already have an account? <a href='#'>Login</a></p>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

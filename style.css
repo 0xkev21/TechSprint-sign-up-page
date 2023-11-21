@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&family=Josefin+Sans&display=swap');
+
+:root {
+    --background-color-mobile:  #0475C6;
+    --background-color-desktop: #0C6DCB;
+    --form-color: #fff;
+    --primary-color: #0C6DCB;
+    --secondary-color: #000;
+    --place-holder-color: #8B8B8B;
+    --input-border-invalid: #F45858;
+    --input-border-valid: #4FF756;
+    --input-border-color: #8b8b8b;
+    --padding-style: 50px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /* border: 1px solid black; */
+}
+
+body {
+    background-color: var(--background-color-mobile);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inria Sans', sans-serif;
+    color: var(--primary-color);
+}
+
+.background-wrapper {
+    height: 240px;
+    width: 100%;
+    background-color: var(--from-color);
+    position: relative;
+}
+
+.fore-ground {
+    background: url('./assets/background-mobile.png');
+    background-blend-mode: multiply;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom-right-radius: var(--padding-style);
+}
+
+.background {
+    background: var(--form-color);
+    width: 100%;
+    height: 100%;
+}
+
+.logo-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+}
+
+img[alt='logo'] {
+    width: 75px;
+    height: 75px;
+}
+
+img[alt='logo title'] {
+    object-fit: contain;
+    width: 300px;
+    height: 24px;
+}
+
+.form-section-wrapper {
+    background: var(--form-color);
+    border-top-left-radius: var(--padding-style);
+    padding: 30px;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    font-size: clamp(20px, 5vw, 40px);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h1 + p {
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-style: italic;
+}
+
+h2 {
+    font-size: 18px;
+    margin-left: 0.5em;
+    color: var(--secondary-color);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+form > fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    border: none;
+}
+
+fieldset > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+legend {
+    margin-left: auto;
+}
+
+input:not([type='checkbox']):not([type='submit']) {
+    height: 3.6em;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 2px solid var(--input-border-color);
+    width: 100%;
+    padding: 0.5em;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:not([type='checkbox']):not([type='submit']):focus:valid {
+    border-color: var(--input-border-valid);
+}
+
+input:not([type='checkbox']):not([type='submit']):focus:invalid {
+    border-color: var(--input-border-invalid);
+}
+
+input:not([type='checkbox']):not([type='submit']):invalid {
+    border-color: var(--input-border-invalid);
+}
+
+input:not([type='checkbox']):not([type='submit']):default {
+    border-color: var(--input-border-color);
+}
+
+input::placeholder {
+    color: var(--place-holder-color);
+}
+
+label[for='terms'] {
+    display: grid;
+    grid-template-columns: 1em auto;
+    justify-content: center;
+    gap: 5px;
+    color: var(--secondary-color);
+    font-size: 14px;
+}
+
+a {
+    color: var(--primary-color);
+}
+
+label[for='terms'] > input {
+    flex: 0;
+}
+
+div + p {
+    color: var(--secondary-color);
+}
+
+div + p > a {
+    text-decoration: none;
+}
+

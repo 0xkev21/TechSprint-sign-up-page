@@ -2,7 +2,7 @@
 
 :root {
     --background-color-mobile:  #0475C6;
-    --background-color-desktop: #0C6DCB;
+    --background-color-desktop: #0995CA;
     --form-color: #fff;
     --primary-color: #0C6DCB;
     --secondary-color: #000;
@@ -108,6 +108,7 @@ h2 {
     padding: .3em;
     color: var(--form-color);
     border-radius: 2px;
+    width: 100%;
 }
 
 form > fieldset {
@@ -130,7 +131,7 @@ legend {
 }
 
 .text-input {
-    height: 3.6em;
+    height: 3em;
     font-size: 1em;
     border-radius: 5px;
     border: 2px solid var(--input-border-color);
@@ -176,11 +177,12 @@ label[for='terms'] > input {
     cursor: pointer;
 }
 
-div + p {
+fieldset + p {
     color: var(--secondary-color);
+    text-align: center;
 }
 
-div + p > a {
+fieldset + p > a {
     text-decoration: none;
 }
 
@@ -206,4 +208,101 @@ input[type='submit'] {
     height: 100%;
     width: 213px;
     pointer-events: none;
+}
+
+@media only screen and (min-width: 800px) {
+    :root {
+        --padding-style: 100px;
+    }
+
+    body {
+        display: grid;
+        grid-template-columns: 400px 1fr;
+        background: var(--background-color-desktop);
+    }
+    
+    .background-wrapper {
+        height: 100%;
+        width: 100%;
+    }
+
+    .fore-ground {
+        height: 100%;
+    }
+    
+    .logo-container {
+        gap: 60px;
+    }
+
+    img[alt='logo'] {
+        width: 80px;
+        height: 80px;
+    }
+    
+    img[alt='logo title'] {
+        width: 300px;
+        height: 30px;
+    }
+    
+    .form-section-wrapper {
+        padding: 40px;
+    }
+
+    .waves {
+        right: -20px;
+    }
+}
+
+@media only screen and (min-width: 1225px) {
+
+    body {
+        grid-template-columns: 570px 1fr;
+        height: 100vh;
+        width: 100vw;
+    }
+    
+    .logo-container {
+        gap: 60px;
+    }
+
+    img[alt='logo'] {
+        width: 110px;
+        height: 110px;
+    }
+    
+    img[alt='logo title'] {
+        width: 400px;
+        height: 40px;
+    }
+    
+    .form-section-wrapper {
+        padding: 50px;
+    }
+
+    .waves {
+        right: 0;
+    }
+
+    form > fieldset {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    fieldset > div {
+        flex-basis: 300px;
+        flex-grow: 1;
+    }
+
+    input[type='submit'] {
+        width: 200px;
+        margin: auto;
+    }
+    
+    .form-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
 }

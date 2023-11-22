@@ -109,7 +109,6 @@ h2 {
     padding: .3em;
     color: var(--form-color);
     border-radius: 2px;
-    width: 100%;
 }
 
 form > fieldset {
@@ -125,6 +124,7 @@ fieldset > div {
     flex-direction: column;
     gap: 5px;
     font-size: 18px;
+    position: relative;
 }
 
 legend {
@@ -209,6 +209,36 @@ input[type='submit'] {
     height: 100%;
     width: 213px;
     pointer-events: none;
+}
+
+.text-input + span {
+    position: absolute;
+    font-size: 0.7em;
+    padding: 0.25em;
+    background-color: var(--input-border-invalid);
+    color: var(--form-color);
+    right: 0;
+    top: 0;
+    border-radius: 8px;
+    opacity: 0;
+    transition: 400ms;
+    transform: translateY(58px);
+}
+
+.text-input:focus:invalid + span {
+    transform: translateY(0);
+    transition-delay: 1s;
+    opacity: 1;
+}
+
+#phoneNumber + span {
+    background-color: var(--input-border-valid);
+    opacity: 0;
+}
+
+#phoneNumber:focus + span {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 @media only screen and (min-width: 800px) {

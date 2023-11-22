@@ -104,6 +104,10 @@ h2 {
     margin-left: 0.5em;
     color: var(--secondary-color);
     font-family: 'Josefin Sans', sans-serif;
+    background-color: var(--primary-color);
+    padding: .3em;
+    color: var(--form-color);
+    border-radius: 2px;
 }
 
 form > fieldset {
@@ -118,13 +122,14 @@ fieldset > div {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    font-size: 18px;
 }
 
 legend {
     margin-left: auto;
 }
 
-input:not([type='checkbox']):not([type='submit']) {
+.text-input {
     height: 3.6em;
     font-size: 1em;
     border-radius: 5px;
@@ -133,26 +138,25 @@ input:not([type='checkbox']):not([type='submit']) {
     padding: 0.5em;
     outline: none;
     transition: 0.3s;
+    caret-color: var(--primary-color);
 }
 
-input:not([type='checkbox']):not([type='submit']):focus:valid {
+.text-input:focus:valid {
     border-color: var(--input-border-valid);
 }
 
-input:not([type='checkbox']):not([type='submit']):focus:invalid {
+.text-input:focus:invalid {
     border-color: var(--input-border-invalid);
 }
 
-input:not([type='checkbox']):not([type='submit']):invalid {
-    border-color: var(--input-border-invalid);
-}
-
-input:not([type='checkbox']):not([type='submit']):default {
+.text-input:default {
     border-color: var(--input-border-color);
 }
 
 input::placeholder {
     color: var(--place-holder-color);
+    font-family: 'Inria Sans', sans-serif;
+    letter-spacing: 0.05em;
 }
 
 label[for='terms'] {
@@ -169,7 +173,7 @@ a {
 }
 
 label[for='terms'] > input {
-    flex: 0;
+    cursor: pointer;
 }
 
 div + p {
@@ -180,3 +184,26 @@ div + p > a {
     text-decoration: none;
 }
 
+input[type='submit'] {
+    width: 100%;
+    height: 3em;
+    background: var(--primary-color);
+    border: none;
+    border-radius: 10px;
+    color: var(--form-color);
+    font-size: 1em;
+    cursor: pointer;
+    letter-spacing: 0.1em;
+}
+
+.waves {
+    background: url(assets/waves.svg);
+    position: fixed;
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    right: -50px;
+    top: 0;
+    height: 100%;
+    width: 213px;
+    pointer-events: none;
+}

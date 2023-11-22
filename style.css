@@ -2,7 +2,8 @@
 
 :root {
     --background-color-mobile:  #0475C6;
-    --background-color-desktop: #0995CA;
+    --background-color-desktop: #0D72CC;
+    --background-color-tablet: #0C87C8;
     --form-color: #fff;
     --primary-color: #0C6DCB;
     --secondary-color: #000;
@@ -218,7 +219,7 @@ input[type='submit'] {
     body {
         display: grid;
         grid-template-columns: 400px 1fr;
-        background: var(--background-color-desktop);
+        background: var(--background-color-tablet);
     }
     
     .background-wrapper {
@@ -227,6 +228,7 @@ input[type='submit'] {
     }
 
     .fore-ground {
+        background: url('assets/background-desktop.png');
         height: 100%;
     }
     
@@ -259,6 +261,7 @@ input[type='submit'] {
         grid-template-columns: 570px 1fr;
         height: 100vh;
         width: 100vw;
+        background: var(--background-color-desktop);
     }
     
     .logo-container {

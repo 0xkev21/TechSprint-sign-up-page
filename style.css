@@ -12,6 +12,8 @@
     --input-border-valid: #4FF756;
     --input-border-color: #8b8b8b;
     --padding-style: 50px;
+    --t-duration: 500ms;
+    --t-delay: 100ms;
 }
 
 *, *::before, *::after {
@@ -250,6 +252,7 @@ input[type='submit'] {
         display: grid;
         grid-template-columns: 400px 1fr;
         background: var(--background-color-tablet);
+        overflow: hidden;
     }
     
     .background-wrapper {
@@ -282,6 +285,13 @@ input[type='submit'] {
 
     .waves {
         right: -20px;
+    }
+
+    .fore-ground {
+        transform: translateY(-30%);
+    }
+    .form-section-wrapper {
+        transform: translateY(30%);
     }
 }
 
@@ -338,4 +348,80 @@ input[type='submit'] {
         justify-content: center;
         flex-direction: column;
     }
+
+    .group-first-name {
+        transition-delay: calc(1 * var(--t-delay));
+    }
+    .group-last-name {
+        transition-delay: calc(2 * var(--t-delay));
+    }
+    .group-mail {
+        transition-delay: calc(3 * var(--t-delay));
+    }
+    .group-phone-number {
+        transition-delay: calc(4 * var(--t-delay));
+    }
+    .group-password {
+        transition-delay: calc(5 * var(--t-delay));
+    }
+    .group-password-confirm {
+        transition-delay: calc(6 * var(--t-delay));
+    }
+    .group-input-buttons {
+        transition-delay: calc(7 * var(--t-delay));
+    }
+    .have-account {
+        transition-delay: calc(8 * var(--t-delay));
+    }
+}
+
+.to-reveal {
+    opacity: 0;
+    transition: var(--t-duration);
+}
+
+.fore-ground {
+    transform: translateX(-30%);
+    opacity: 0;
+}
+
+.form-section-wrapper {
+    transform: translateX(30%);
+    opacity: 0;
+}
+
+fieldset > div {
+    transform: translateY(50px);
+    transition-delay: var(--t-duration);
+    opacity: 0;
+}
+
+[alt='logo'] {
+    transform: translateY(30px);
+    transition-delay: var(--t-duration);
+}
+[alt='logo title'] {
+    transform: translateY(-30px);
+    transition-delay: var(--t-duration);
+}
+
+h2 {
+    transform: translateX(-50px);
+    opacity: 0;
+}
+
+h1.reveal, h1+p.reveal, h2.reveal, legend.reveal {
+    transition-delay: var(--t-duration);
+}
+
+.have-account {
+    opacity: 0;
+    transition-delay: var(--t-duration);
+}
+
+.reveal {
+    /* opacity: 1; */
+    transform: translateY(0);
+    transition-duration: var(--t-duration);
+    opacity: 1;
 }

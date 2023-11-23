@@ -9,22 +9,22 @@
 <body>
     <div class="background-wrapper">
         <div class="background"></div>
-        <div class="fore-ground"></div>
+        <div class="fore-ground to-reveal"></div>
         <div class="logo-container">
-            <img src="assets/logo.svg" alt="logo">
-            <img src="assets/logo-title.svg" alt="logo title">
+            <img src="assets/logo.svg" alt="logo" class="to-reveal">
+            <img src="assets/logo-title.svg" alt="logo title" class="to-reveal">
         </div>
     </div>
-    <div class="form-section-wrapper">   
-        <div class="heading">
-            <h1>Welcome to TechSprint Innovations</h1>
-            <p>Empowering Innovation for a Connected Tomorrow</p>
+    <div class="form-section-wrapper to-reveal">   
+        <div class="heading to-reveal">
+            <h1 class="to-reveal">Welcome to TechSprint Innovations</h1>
+            <p class="to-reveal">Empowering Innovation for a Connected Tomorrow</p>
         </div>
         <div class="form-container">
-            <h2>Get Involved Now !</h2>
+            <h2 class="to-reveal">Get Involved Now !</h2>
             <form method="POST" action="">
                 <fieldset>
-                    <legend>Contact Information</legend>
+                    <legend class="to-reveal">Contact Information</legend>
                     <div class="group-first-name">
                         <label for="firstName">First Name <span aria-label="required">*</span></label>
                         <input type="text" name="firstName" id="firstName" value="" placeholder="John" required class="text-input">
@@ -63,7 +63,7 @@
                         <input type="submit" value="Create Account">
                     </div>
                 </fieldset>
-                <p>Already have an account? <a href='#'>Login</a></p>
+                <p class="have-account">Already have an account? <a href='#'>Login</a></p>
             </form>
         </div>
     </div>
